@@ -6,8 +6,7 @@ on:
       - main
 
 jobs:
-  build:
-    name: Build
+  publish-gpr:
     runs-on: ubuntu-latest
 
     steps:
@@ -17,8 +16,13 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v3
 
+        with:
+          node-version: 20
+          registry-url: https://npm.pkg.github.com/
+          scope: '@jannis2301'
+
       - name: Install dependencies
-        uses: bahmutov/npm-install@v1
+        run: npm install
 
       - name: Build project
         run: npm run build
@@ -26,8 +30,7 @@ jobs:
       - name: Test
         run: npm test
 
-      - name: Upload production-ready build files
-        uses: actions/upload-artifact@v3
-        with:
-          name: production-files
-          path: ./dist
+      - name: Publish
+        run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
