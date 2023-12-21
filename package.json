@@ -1,11 +1,10 @@
 {
   "name": "utils",
-  "private": true,
   "version": "1.0.0",
   "type": "module",
   "repository": {
     "type": "git",
-    "url": "https://github.com/jannis2301/utils"
+    "url": "git+https://github.com/jannis2301/utils.git"
   },
   "scripts": {
     "start": "vite --host",
