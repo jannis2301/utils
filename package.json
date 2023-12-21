@@ -7,7 +7,7 @@
     "url": "https://github.com/jannis2301/utils"
   },
   "publishConfig": {
-    "registry": "https://registry.npmjs.org/"
+    "registry": "https://npm.pkg.github.com/@jannis2301"
   },
   "scripts": {
     "start": "vite --host",
