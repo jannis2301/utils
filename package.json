@@ -3,6 +3,10 @@
   "private": true,
   "version": "1.0.0",
   "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jannis2301/utils"
+  },
   "scripts": {
     "start": "vite --host",
     "test": "vitest run",
