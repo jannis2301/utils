@@ -1,5 +1,5 @@
 {
-  "name": "utils",
+  "name": "@riots/utils",
   "version": "1.0.0",
   "type": "module",
   "repository": {
