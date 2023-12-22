@@ -1,25 +1,20 @@
-name: Deploy Utils
-
+name: Build
 on:
   push:
-    branches:
-      - main
-
+    branches: [main]
+  pull_request:
+    branches: [main]
 jobs:
-  publish-gpr:
+  build:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout repo
         uses: actions/checkout@v3
 
       - name: Setup Node
         uses: actions/setup-node@v3
-
         with:
           node-version: 20
-          registry-url: https://npm.pkg.github.com/
-          scope: '@jannis2301'
 
       - name: Install dependencies
         run: npm install
@@ -29,8 +24,3 @@ jobs:
 
       - name: Test
         run: npm test
-
-      - name: Publish
-        run: npm publish
-        env:
-          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
