@@ -30,7 +30,7 @@ jobs:
 
       - run: |
           echo @jannis2301:https://npm.pkg.github.com/ > dist/.npmrc
-          echo '//npm.pkg.github.com/:_authToken=${NPM_TOKEN}' >> dist/.npmrc
+          echo '//npm.pkg.github.com/:_authToken=${NODE_AUTH_TOKEN}' >> dist/.npmrc
 
       - run: npm ci
 
