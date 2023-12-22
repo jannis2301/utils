@@ -4,10 +4,10 @@
   "type": "module",
   "repository": {
     "type": "git",
-    "url": "https://github.com/jannis2301/utils"
+    "url": "git+https://github.com/jannis2301/utils.git"
   },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/@jannis2301"
+    "registry": "https://npm.pkg.github.com"
   },
   "scripts": {
     "start": "vite --host",
